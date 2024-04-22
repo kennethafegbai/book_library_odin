@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h4>Book Library Project</h4>
+            <button id="show_form" onclick="showForm()">+ Add</button>
+        </nav>
+    </header>
+    <hr>
+
+    <main>
+       <section id="books">
+
+       </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <section id="form_section">
+        <form id="form" onsubmit="event.preventDefault(); addBook(); hideForm()">
+            <div class="form_header">
+                <h4>Fill the form</h4>
+                <button onclick="hideForm()">- Close</button>
+            </div>
+
+            <div>
+                <label for="title">Book name</label>
+                <input required type="text" id="title" name="title" />
+            </div>
+
+            <div>
+                <label for="author">Author</label>
+                <input required type="text" id="author" name="author" />
+            </div>
+
+            <div>
+                <label for="pages">Book pages</label>
+                <input required type="text" id="pages" name="pages" />
+            </div>
+            <div>
+                <label for="pages">Have you read the book?</label>
+                <input type="checkbox" id="status" name="status" />
+            </div>
+            <button type="submit">Save</button>
+        </form>
+      </section>
+
+    <script src="./book.js"></script>
+</body>
+</html>
